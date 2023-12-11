@@ -8,9 +8,16 @@ public class Account {
     private BigDecimal accountBalance;
     private Client customer;
 
-    public Account(String accountNumber, BigDecimal accountBalance, Client customer) {
+    public void depositMoney(BigDecimal input){
+        accountBalance = accountBalance.add(input);
+
+    }
+    public void withdrawMoney(BigDecimal output){
+        accountBalance = accountBalance.subtract(output);
+    }
+    public Account(String accountNumber, String accountBalance, Client customer) {
         this.accountNumber = accountNumber;
-        this.accountBalance = accountBalance;
+        this.accountBalance = new BigDecimal(accountBalance);
         this.customer = customer;
     }
 

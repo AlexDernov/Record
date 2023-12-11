@@ -1,6 +1,4 @@
-import record.Animal;
-import record.Owner;
-import record.Species;
+import record.*;
 
 import java.util.SortedMap;
 
@@ -17,5 +15,12 @@ public class Main {
         System.out.println(animal3.equals(animal2));
         System.out.println(animal1);
         System.out.println(animal2);
+
+        Client client1 = new Client("Max", "Mustermann", 1);
+        Client client2 = new Client("Lise", "Mustermann", 2);
+        BankService bankService = new BankService();
+        bankService.openAccount(client1);
+        bankService.openAccount(client2);
+
     }
 }
