@@ -21,6 +21,7 @@ public class Main {
         BankService bankService = new BankService();
         bankService.openAccount(client1);
         bankService.openAccount(client2);
+        bankService.transferMoney(client1);
 
     }
 }

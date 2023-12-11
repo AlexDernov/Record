@@ -4,7 +4,8 @@ import java.math.BigDecimal;
 
 public class BankService {
     public String openAccount(Client client){
-        Account newAccount = new Account("0001", "0", client);
+        double number = Math.random();
+        Account newAccount = new Account("number", "0", client);
         return newAccount.getAccountNumber();
     }
     public void transferMoney(Account accountSender, Account accountRecipient, String amount ){
